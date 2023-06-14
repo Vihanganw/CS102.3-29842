@@ -1,0 +1,193 @@
+Question 01:-
+#include <stdio.h>
+
+int main() {
+  int num;
+
+  printf("Enter an integer: ");
+  scanf("%d", &num);
+
+  if (num % 2 == 0) {
+    printf("%d is even.\n", num);
+  } else {
+    printf("%d is odd.\n", num);
+  }
+
+  return 0;
+}
+Question 2:-
+#include <stdio.h>
+
+int main() {
+  int num1, num2, operator, result;
+
+  // Display the menu
+  printf("Select an operation:\n");
+  printf("1. Addition\n");
+  printf("2. Subtraction\n");
+  printf("3. Multiplication\n");
+  printf("4. Division\n");
+  printf("5. Exit\n");
+  scanf("%d", &operator);
+
+  // Get the two numbers
+  printf("Enter the first number: ");
+  scanf("%d", &num1);
+  printf("Enter the second number: ");
+  scanf("%d", &num2);
+
+  // Perform the operation
+  switch (operator) {
+    case 1:
+      result = num1 + num2;
+      break;
+    case 2:
+      result = num1 - num2;
+      break;
+    case 3:
+      result = num1 * num2;
+      break;
+    case 4:
+      if (num2 == 0) {
+        printf("Division by zero is undefined.\n");
+      } else {
+        result = num1 / num2;
+      }
+      break;
+    case 5:
+      break;
+    default:
+      printf("Invalid operator.\n");
+      break;
+  }
+
+  // Display the result
+  printf("%d %c %d = %d\n", num1, operator == 4 ? '/' : operator, num2, result);
+
+  return 0;
+}
+Question 3:-
+#include <stdio.h>
+#include <math.h>
+
+// Function declarations
+void calculateCircumference(double radius);
+void calculateArea(double radius);
+void calculateVolume(double radius);
+
+int main() {
+  // Display the menu
+  printf("What would you like to calculate?\n");
+  printf("1. Circumference of a circle\n");
+  printf("2. Area of a circle\n");
+  printf("3. Volume of a sphere\n");
+
+  // Get the user's selection
+  int selection;
+  scanf("%d", &selection);
+
+  // Validate the user's selection
+  if (selection < 1 || selection > 3) {
+    printf("Invalid selection.\n");
+    return 1;
+  }
+
+  // Get the radius from the user
+  double radius;
+  printf("Enter the radius: ");
+  scanf("%lf", &radius);
+
+  // Perform the appropriate calculation
+  switch (selection) {
+    case 1:
+      calculateCircumference(radius);
+      break;
+    case 2:
+      calculateArea(radius);
+      break;
+    case 3:
+      calculateVolume(radius);
+      break;
+  }
+
+  return 0;
+}
+
+// Calculate the circumference of a circle
+void calculateCircumference(double radius) {
+  double circumference = 2 * M_PI * radius;
+  printf("The circumference of the circle is %.2f.\n", circumference);
+}
+
+// Calculate the area of a circle
+void calculateArea(double radius) {
+  double area = M_PI * radius * radius;
+  printf("The area of the circle is %.2f.\n", area);
+}
+
+// Calculate the volume of a sphere
+void calculateVolume(double radius) {
+  double volume = (4.0 / 3.0) * M_PI * radius * radius * radius;
+  printf("The volume of the sphere is %.2f.\n", volume);
+}
+Ouestion 4:-
+#include <stdio.h>
+
+int main() {
+  char ch;
+
+  printf("Enter a character: ");
+  scanf(" %c", &ch);
+
+  switch (ch) {
+    case 'a':
+    case 'e':
+    case 'i':
+    case 'o':
+    case 'u':
+      printf("It is a vowel.\n");
+      break;
+    default:
+      printf("It is a consonant.\n");
+      break;
+  }
+
+  return 0;
+}
+Question5:-
+#include <stdio.h>
+
+int main() {
+  int month;
+
+  printf("Enter month number (1-12): ");
+  scanf("%d", &month);
+
+  switch (month) {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+      printf("31 days\n");
+      break;
+    case 2:
+      printf("28 days\n");
+      break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+      printf("30 days\n");
+      break;
+    default:
+      printf("Invalid month number\n");
+      break;
+  }
+
+  return 0;
+}
+
+
