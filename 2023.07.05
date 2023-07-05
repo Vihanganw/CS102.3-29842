@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int arr[10];
+    int min=arr[0];
+    for (int i=0;i<10;i++)
+    {
+        printf("Enter the value of the element %d:",i);
+        scanf("%d",&arr[i]);
+        if (arr[i] <= min)
+        {
+            min = arr[i];
+        }
+    }
+    printf("The minimum value is %d\n",min);
+
+    return 0;
+}
+
+#include <stdio.h>
+
+int main()
+{
+    int size;
+    printf("Enter the size of the arrays: ");
+    scanf("%d", &size);
+
+    int array1[size], array2[size];
+
+
+    for (int i = 0; i < size; i++)
+    {
+        printf("Enter the element at index %d of array1: ", i);
+        scanf("%d", &array1[i]);
+
+        printf("Enter the element at index %d of array2: ", i);
+        scanf("%d", &array2[i]);
+    }
+
+    int scalar_sum = 0;
+    for (int i = 0; i < size; i++)
+    {
+        scalar_sum += array1[i] + array2[i];
+    }
+
+
+    printf("The scalar sum of the arrays is %d\n", scalar_sum);
+
+    return 0;
+}
+
